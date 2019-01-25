@@ -1,0 +1,73 @@
+.containerConfig{
+    max-width: 500px;
+    position: relative;
+    padding: 10px;
+    font-style: italic;
+}
+.configuration{
+    border: black 1px solid;
+    padding: 9px;
+    text-align: center;    
+}
+.headerConfig p{
+    position: absolute;
+    background: white;
+    top: 0;
+    margin: 0;
+    left: 45%;
+    padding: 0px 5px;
+}
+
+#numberCircle, #colorCircle{
+    width: 44px;
+    border-radius: 4px;
+    border: solid 01px #939393;
+    background-color: white;
+    margin-top: 10px;
+}
+
+#addCircle{
+    margin-top: 16px;
+    background: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-style: italic;
+}
+#circleAnimation{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    animation: circleMove 5s infinite;
+    position: relative;
+    z-index: 2;
+}
+.divtransparent{
+    background-image: radial-gradient(circle , transparent 60%, blue 60%);
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+}
+.divtransparent::after{
+    content:'';
+    width: 50px;
+    height: 50px;
+}
+.resultConfig{
+    min-width: 500px;
+    position: relative;
+    min-height: 50px;
+}
+
+@keyframes circleMove{
+    0%{
+        left: 0%;
+    }
+    50%{
+        left:100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
